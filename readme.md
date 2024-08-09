@@ -1,4 +1,4 @@
-# Alterações Realizadas
+# Alterações Realizadas para Pessoas Daltônicas
 
 1. **Cor de Fundo (`background-color`)**: Alterado de `#00644B` para `#2B2B2B`, uma cor mais neutra e menos saturada, proporcionando melhor contraste e evitando confusões de tonalidade para pessoas com deficiência visual.
 
