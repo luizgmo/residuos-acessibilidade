@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resíduos Eletroeletrônicos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="topo">
+        <h1>Reciclagem de Resíduos Eletroeletrônicos</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="./sobre.html">Sobre</a></li>
+            <li><a href="./impactos.html">Impactos Ambientais</a></li>
+            <li><a href="./reciclagem.html">Reciclagem</a></li>
+            <li><a href="./contato.html">Contato</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="grid-section">
+            <form id="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" pattern="\d{10,11}" required>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#topo">Voltar ao topo</a>
+        <p>&copy; 2024 Resíduos Eletroeletrônicos</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            const phonePattern = /^\d{10,11}$/;
+            const phoneInput = document.getElementById('phone').value;
+
+            if (!phonePattern.test(phoneInput)) {
+                alert('Insira um número de telefone válido com 10 ou 11 dígitos.');
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
